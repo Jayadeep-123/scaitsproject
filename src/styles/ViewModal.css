@@ -1,0 +1,106 @@
+
+.new-field-container{
+  margin: -21px;
+  margin-left:220px;
+  width:1230px;
+  background-color:black;
+  height: 920px;;
+  margin-top: 0.35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Popup */
+.popup {
+background: white;
+height: 372px;
+width: 377px; 
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+position: relative;
+}
+/* Header */
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header h2 {
+font-size: 18px;
+font-weight: 500;
+margin: 0;
+}
+
+
+.close-btn {
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+}
+/* Form Rows */
+.form-row {
+display: flex;
+gap: 12px;
+margin-top: 15px;
+}
+.form-group {
+display: flex;
+flex-direction: column;
+}
+.form-group label {
+font-size: 13px;
+margin-bottom: 4px;
+color: #344054;
+font-weight: 400;
+}
+
+/* Exact small and big box sizes */
+.form-group.small input {
+width: 90px;
+}
+
+.form-group.medium input {
+  width: 130px;
+  }
+
+.form-group.big input {
+width: 170px;
+}
+
+input {
+padding: 6px 8px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 14px;
+}
+
+/* Buttons */
+.button-group {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.delete-btn {
+background: none;
+border: 1px solid red;
+color: red;
+padding: 8px 20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight: bold;
+}
+
+.edit-btn{
+  background: #3b28ff;
+  border: none;
+  color: white;
+  width:270px;
+  padding: 8px 90px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  }

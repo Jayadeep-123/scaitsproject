@@ -1,0 +1,272 @@
+/* Dashboard Container */
+.dashboard-container {
+  margin-left: 240px;
+  margin-top: 50px;
+}
+
+
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Filter & Export Buttons */
+.filter,
+.export {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 32px;
+  width: 85px;
+}
+
+.filter {
+  margin-right: 8px;
+  position: relative;
+}
+
+.filter .notification {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -8px;
+  right: -5px;
+}
+
+.export {
+  margin-right: 10px;
+}
+
+/* Add New Field Button */
+.add-new-field {
+  background-color: blue;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 130px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Horizontal Line */
+.narrow-hr {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #dfe6eb;
+  box-shadow: 3px 3px 20px 0px rgba(247, 240, 240, 0.3);
+}
+
+/* Table Scroll */
+.table-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Table */
+.city-table {
+  min-width: 1000px;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* Table Headers */
+.city-table th {
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 12px;
+  text-align: left;
+  vertical-align: middle;
+  padding: 6px 8px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Table Cells */
+.city-table td {
+  font-size: 12.5px;
+  white-space: nowrap;
+  padding: 6px 8px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+/* Sticky First Column */
+.city-table th:first-child,
+.city-table td:first-child {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 2;
+  box-shadow: 2px 0 5px rgba(230, 20, 20, 0.05);
+}
+
+/* Sticky Header */
+.city-table thead th {
+  position: sticky;
+  top: 0;
+  background: #fefefe;
+  z-index: 3;
+}
+
+/* Row Styling */
+.headings {
+  color: #84919a;
+}
+
+.values-styling tr {
+  color: #252c32;
+}
+
+/* Icon Button */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ccc;
+  margin-right: 8px;
+}
+
+.icon-btn:hover {
+  color: #0642da;
+}
+
+/* Pagination - placed below table */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f8fafb;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1120px;
+  height: 42px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Pagination Buttons */
+.pagination-btn {
+  padding: 6px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+.pagination-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.page {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.page.active {
+  background-color: #eef2ff;
+  color: #4338ca;
+}
+
+.dots {
+  color: #999;
+  padding: 6px 10px;
+}
+
+/* Hide buttons on small screens but keep table scrollable */
+@media (max-width: 640px) {
+  .add-new-field,
+  .filter,
+  .export {
+    display: none !important;
+  }
+
+  .dashboard-container {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 0 10px;
+  }
+
+  .header h1 {
+    margin-top: 40px;
+  }
+
+  .table-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .city-table {
+    min-width: 700px;
+    width: 100%;
+    display: table;
+  }
+
+  .city-table th,
+  .city-table td {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  /* Ensure the first column (checkbox) stays sticky on mobile too */
+  .city-table th:first-child,
+  .city-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: #fff; /* Ensure it's visible */
+    z-index: 5; /* Above scrollable columns */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .city-table thead th:first-child {
+    z-index: 6; /* Ensure header is above cells */
+  }
+}

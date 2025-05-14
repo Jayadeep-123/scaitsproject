@@ -1,0 +1,98 @@
+.new-field-container1{
+  margin: -21px;
+  margin-left:210px;
+  width:1230px;
+  background-color:black;
+  height:920px;
+  margin-top: 0.35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup1 {
+background: white;
+height: 372px;
+width: 370px; 
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+position: relative;
+}
+
+.header1 {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header1 h2 {
+font-size: 18px;
+font-weight: 400;
+margin: 0;
+}
+
+.close-btn1 {
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+}
+
+.form-row1 {
+display: flex;
+gap: 12px;
+margin-top: 15px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+}
+
+.form-group label {
+font-size: 12px;
+margin-bottom: 4px;
+color: #555;
+}
+
+.form-group.smalll input {
+width: 70px;
+}
+.form-group.big1 input {
+width: 160px;
+}
+
+input {
+padding: 6px 8px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 14px;
+}
+
+.button-group1 {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.delete-btnn {
+background: none;
+border: 1px solid red;
+color: red;
+padding: 8px 20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight: bold;
+}
+
+.edit-btnn {
+background: #3b28ff;
+border: none;
+color: white;
+width:270px;
+padding: 8px 90px;
+border-radius: 6px;
+cursor: pointer;
+font-weight: bold;
+}
