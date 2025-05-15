@@ -1,3 +1,137 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 234px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  z-index: 1000;
+  padding-top: 12px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Logo section */
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar .logo img {
+  height: 24px;
+}
+
+/* Close icon */
+.sidebar .close-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Dropdown container */
+.dropdown-section {
+  margin: 12px 0;
+}
+
+/* Dropdown header with icon and text */
+.dropdown-header {
+  padding: 10px 16px;
+  font-size: 15px;           /* Slightly bigger font */
+  font-weight: 600;
+  color: #3b49df;
+  background-color: #eef2ff;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-header i:first-child {
+  font-size: 18px;           /* Larger icon in header */
+  margin-right: 8px;
+  color: #3b49df;
+}
+
+/* Sub-menu list */
+.sub-menu {
+  list-style: none;
+  margin: 6px 0 0 16px;
+  padding: 0;
+}
+
+/* Sub-menu items */
+.sub-menu li {
+  padding: 5px 0;            /* Reduced vertical padding */
+  font-size: 13px;           /* Smaller font */
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sub-menu li i {
+  margin-right: 8px;
+  font-size: 14px;           /* Smaller submenu icons */
+  color: #b0b0b0;
+}
+
+/* Sidebar main menu list */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar main menu items */
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;         /* Reduced padding */
+  font-size: 14px;           /* Main menu font size */
+  color: #5b6871;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Sidebar main menu icons */
+.sidebar li i {
+  margin-right: 8px;         /* Space between icon and text */
+  font-size: 16px;           /* Icon size */
+  color: #a0a0a0;
+}
+
+/* Hover effect for main and sub menu items */
+.sidebar li:hover,
+.sub-menu li:hover {
+  font-weight: 600;
+  background-color: #f5f7ff;
+}
+
+/* Active menu item */
+.sidebar li.active {
+  color: #3b49df;
+  font-weight: 600;
+}
+
+/* Responsive behavior for sidebar */
+@media (max-width: 640px) {
+  .sidebar {
+    width: 100vw;
+    z-index: 1002;
+  }
+
+  .sidebar .close-icon {
+    display: block;
+  }
+}
+
 /* Topbar container */
 .topbar {
   position: fixed;
@@ -15,14 +149,14 @@
 
 /* Top row: Logo + Menu */
 .topbar-upper {
-  display: none; /* Hidden on large screens */
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 46px;
   border-bottom: 1px solid #ddd;
 }
 
-/* Logo - visible on small screens */
+/* Logo - hidden on large screens, shown on small */
 .topbar-logo {
   display: none;
 }
@@ -31,17 +165,56 @@
   height: 30px;
   width: auto;
   object-fit: contain;
+  margin-top: 7px;
+  margin-left: 10px;
 }
 
-/* Menu icon - visible on small screens */
+/* Menu icon - hidden on large screens, shown on small */
 .menu-icon {
   display: none;
+  cursor: pointer;
+  margin-right: 13px;
 }
 
 .menu-icon i {
-  font-size: 20px;
-  cursor: pointer;
+  font-size: 24px;
   color: #5B6871;
+}
+
+/* Dropdown menu styles */
+.menu-dropdown {
+  position: fixed;
+  top: 46px; /* below topbar-upper */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 46px);
+  background-color: #fff;
+  z-index: 1002;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.menu-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-dropdown ul li {
+  display: flex; 
+  align-items: center; 
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  gap: 12px; 
+  color: #717171;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.menu-dropdown ul li:hover {
+  background-color: #f0f0f0;
 }
 
 /* Bottom row: Search + Icons */
@@ -50,6 +223,7 @@
   justify-content: space-between;
   align-items: center;
   height: 46px;
+  margin-top: -46px;
 }
 
 /* Search container */
@@ -129,7 +303,6 @@ body {
   }
 
   .topbar-upper {
-    display: flex; 
     background-color: #F6F8F9;
     margin-left: -16px;
     margin-right: -16px;
@@ -141,15 +314,16 @@ body {
 
   .menu-icon {
     display: block;
-    margin-right: 13px;
   }
 
   .topbar-lower {
-    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
-    padding: 8px 0;
+    height: 32px;
+    margin-top: 10px;
   }
+  
 
   .search-container {
     max-width: 100%;
@@ -163,9 +337,26 @@ body {
   .Feedback-text {
     display: none;
   }
+}
 
-  .topbar-logo img {
-    margin-top: 7px;
-    margin-left: 10px;
+/* Large screens: Hide logo and menu icon only */
+@media (min-width: 641px) {
+  .topbar-logo,
+  .menu-icon {
+    display: none !important;
   }
+
+  .menu-dropdown {
+    display: none !important;
+  }
+
+  .topbar-lower {
+    display: flex !important;
+  }
+
+  .search-container,
+  .topbar-icons {
+    display: flex !important;
+  }
+  
 }
