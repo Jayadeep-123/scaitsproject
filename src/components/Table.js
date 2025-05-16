@@ -3,11 +3,11 @@ import '../styles/Table.css';
 import { Link } from 'react-router-dom';
 
 function DashBoard() {
-  const itemsPerPage = 25; 
+  const itemsPerPage = 10; 
   const [data] = useState([
     
       { ACADEMIC_ID: "Andhra Pradesh", JOIN_YEAR: "Guntur", ACADEMIC_YEAR: "Grands Branch", CLASS_ID: "7654", RECEIPT_STATUS: "Updated", STATUS: "Updated", FY_START_ON: "Updated", FY_END_ON: "Updated", START_ON: "Updated", END_ON: "Andhra Pradesh" },
-      { ACADEMIC_ID: "Andhra Pradesh", JOIN_YEAR: "Guntur", ACADEMIC_YEAR: "Grands Branch", CLASS_ID: "7654", RECEIPT_STATUS: "Updated", STATUS: "Updated", FY_START_ON: "Updated", FY_END_ON: "Updated", START_ON: "Updated", END_ON: "Andhra Pradesh" },
+      { ACADEMIC_ID: "Telangana", JOIN_YEAR: "Khammam", ACADEMIC_YEAR: "Grands Branch", CLASS_ID: "7655", RECEIPT_STATUS: "Updated", STATUS: "Updated", FY_START_ON: "Updated", FY_END_ON: "Updated", START_ON: "Updated", END_ON: "Telangana" },
       { ACADEMIC_ID: "Andhra Pradesh", JOIN_YEAR: "Guntur", ACADEMIC_YEAR: "Grands Branch", CLASS_ID: "7654", RECEIPT_STATUS: "Updated", STATUS: "Updated", FY_START_ON: "Updated", FY_END_ON: "Updated", START_ON: "Updated", END_ON: "Andhra Pradesh" },
       { ACADEMIC_ID: "Andhra Pradesh", JOIN_YEAR: "Guntur", ACADEMIC_YEAR: "Grands Branch", CLASS_ID: "7654", RECEIPT_STATUS: "Updated", STATUS: "Updated", FY_START_ON: "Updated", FY_END_ON: "Updated", START_ON: "Updated", END_ON: "Andhra Pradesh" },
       { ACADEMIC_ID: "Andhra Pradesh", JOIN_YEAR: "Guntur", ACADEMIC_YEAR: "Grands Branch", CLASS_ID: "7654", RECEIPT_STATUS: "Updated", STATUS: "Updated", FY_START_ON: "Updated", FY_END_ON: "Updated", START_ON: "Updated", END_ON: "Andhra Pradesh" },
@@ -39,10 +39,8 @@ function DashBoard() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scrolling down
         setIsVisible(false);
       } else {
-        // Scrolling up
         setIsVisible(true);
       }
       lastScrollY = currentScrollY;
@@ -52,7 +50,7 @@ function DashBoard() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  
+
   const [currentPage, setCurrentPage] = useState(1); 
   
   const totalPages = Math.ceil(data.length / itemsPerPage); 
@@ -60,7 +58,6 @@ function DashBoard() {
   const startIndex = (currentPage - 1) * itemsPerPage; 
   const currentItems = data.slice(startIndex, startIndex + itemsPerPage); 
   
-  // Handle page change
   const handlePageChange = (pageNumber) => {
     if (pageNumber > 0 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
