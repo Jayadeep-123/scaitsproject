@@ -23,7 +23,7 @@ const Sidebar = () => {
               onClick={toggleStudentDropdown}
               className={`dropdown-btn ${isStudentOpen ? 'active' : ''}`}
             >
-              <svg
+             <svg
               width="13"
               height="16"
               viewBox="0 0 13 16"

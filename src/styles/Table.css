@@ -346,6 +346,7 @@ background-color: red;
     left: 0;
     background: white;
     z-index: 4;
+    margin-left: 0px;
   }
 
   .city-table th:first-child input[type="checkbox"] {
