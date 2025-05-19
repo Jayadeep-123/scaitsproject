@@ -245,7 +245,7 @@ button {
 }
 
 /* Responsive */
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   
   .dashboard-container {
     margin-left: 0;
@@ -257,6 +257,7 @@ button {
   .header {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: -15px;
   }
   
 .header-left h1 {

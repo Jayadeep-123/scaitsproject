@@ -110,7 +110,7 @@ input {
   font-weight: bold;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .new-field-container {
     width: 100%;
     height: 100vh;
@@ -136,9 +136,9 @@ input {
 
   .header {
     display: flex;
-    flex-direction: row; /* Stack elements vertically */
-    align-items: center; /* Center-align the elements */
-    gap: 8px; /* Slightly smaller gap for smaller screens */
+    flex-direction: row;
+    align-items: center; 
+    gap: 8px; 
     margin-bottom: 15px;
   }
 
@@ -154,6 +154,7 @@ input {
     border: none;
     font-size: 20px;
     cursor: pointer;
+    margin-top: -10px;
   }
 
   .form-row {

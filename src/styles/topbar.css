@@ -124,7 +124,7 @@
 }
 
 /* Responsive behavior for sidebar */
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .sidebar {
     width: 100vw;
     z-index: 1002;
