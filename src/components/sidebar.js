@@ -37,8 +37,13 @@ const Sidebar = () => {
               />
             </svg>
 
-            <span>Students</span>
-            <i className="fas fa-angle-down arrow"></i>
+           <span>Students</span>
+<i>
+  <svg width="18" height="10" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 6.125L9 11.125L4 6.125" stroke="currentColor" stroke-width="2.5" stroke-linecap="" stroke-linejoin="round"/>
+  </svg>
+</i>
+
           </li>
 
             {isStudentOpen && (

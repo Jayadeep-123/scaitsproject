@@ -33,15 +33,15 @@
   max-width: 160px;
   height: auto;
 }
-.sidebar .logo{
-      display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    height: 40px;
-    border-bottom: 1px solid #eee;
-}
 
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 40px;
+  border-bottom: 1px solid #eee;
+}
 
 .menu-section ul,
 .bottom-section ul {
@@ -61,18 +61,18 @@
   transition: background-color 0.2s ease-in-out;
   border-radius: 4px;
 }
+
 .sidebar li i {
-    margin-right: 8px;
-    font-size: 16px;
-    color: #a0a0a0;
-    /* font-family: intel; */
+  margin-right: 8px;
+  font-size: 16px;
+  color: #a0a0a0;
 }
 
 .sidebar-link {
   text-decoration: none;
   color: #a2a5a8;
   display: block;
-  border-radius: 4px; 
+  border-radius: 4px;
   margin-left: 25px;
 }
 
@@ -103,27 +103,26 @@
 .dropdown-btn.active i,
 .dropdown-btn.active span {
   color: #3425FF;
-  fill: currentColor;
 }
 
-/* arrow is black by default */
+/* Arrow Icon */
 .arrow {
   margin-left: auto;
   transition: transform 0.3s ease;
-  color: #000; /* black arrow by default */
-  fill: #000;
+  color: #a2a5a8; /* gray by default */
 }
 
-/* change to blue when dropdown is active */
+/* Change arrow stroke color when dropdown is active */
 .dropdown-btn.active .arrow {
-  color: #3425FF;
-  fill: #3425FF;
+  color: #3425FF; /* blue when active */
 }
 
+/* Arrow rotation */
 .rotate {
   transform: rotate(180deg);
 }
 
+/* Dropdown submenu */
 .dropdown-content-vertical {
   padding-left: 20px;
   margin-top: 5px;
@@ -140,12 +139,15 @@
   background-color: #d6ecff;
 }
 
+/* Bottom section (e.g. logout/settings) */
 .bottom-section {
   margin-top: auto;
   padding-bottom: 10px;
   border-top: 1px solid #ddd;
 }
-@media(max-width: 480px) {
+
+/* Hide sidebar on small screens */
+@media (max-width: 480px) {
   .sidebar {
     display: none;
   }
